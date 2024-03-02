@@ -1,1 +1,3 @@
 # StudyForSoftwareEngineering
+
+本仓库作为本人学习软件工程这门课程的相关内容的发布地
