@@ -1,8 +1,8 @@
 <component name="ArtifactManager">
-  <artifact name="SGHomework1:jar">
+  <artifact name="main:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/SGHomework1_jar</output-path>
     <root id="root">
-      <element id="archive" name="SGHomework1.jar">
+      <element id="archive" name="main.jar">
         <element id="module-output" name="SGHomework1" />
         <element id="module-output" name="MyInputModule" />
         <element id="module-output" name="MyOutputModule" />
