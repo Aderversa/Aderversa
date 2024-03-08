@@ -14,17 +14,15 @@ public class MyInput {
             fis = new FileInputStream(origin);
             byte[] bytes = new byte[(int)origin.length()];
 
-            // 读取原文文件的内容
             int n = fis.read(bytes);
+            fis.close();
             this.originString = new String(bytes, StandardCharsets.UTF_8);
-            System.out.println(originString);
 
-            // 读取抄袭文件的内容
             fis = new FileInputStream(copy);
             bytes = new byte[(int)copy.length()];
             n = fis.read(bytes);
+            fis.close();
             this.copyString = new String(bytes, StandardCharsets.UTF_8);
-            System.out.println(copyString);
 
             this.answer = answer;
         }
@@ -46,7 +44,6 @@ public class MyInput {
     public String getOriginString() {
         return this.originString;
     }
-
     public String getCopyString() {
         return this.copyString;
     }

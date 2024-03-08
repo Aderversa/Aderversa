@@ -2,40 +2,36 @@ package pers.calculate;
 
 public class Calculate {
 
+    // 统计原文文章和抄袭文章的相同部分，返回 相同部分字数 和 原文总字数 的比值
     public static double Ratio(String origin, String copy) {
         int equals = 0;
-        // 去除原文和抄袭文章的全部空白字符
         origin = origin.replaceAll("\\s*", "");
         copy = copy.replaceAll("\\s*", "");
-        // 将String转化成charArray便于单个中文字符的比较
         char[] originArray = origin.toCharArray();
         char[] copyArray = copy.toCharArray();
 
-        // oIndex 作为原文字符的下标
-        int oIndex = 0;
-        // cIndex 作为抄袭文章的字符的下标
-        int cIndex = 0;
+        int originIndex = 0;
+        int copyIndex = 0;
 
-        while(oIndex < originArray.length && cIndex < copyArray.length) {
-            if(originArray[oIndex] == copyArray[cIndex])  {
+        while(originIndex < originArray.length && copyIndex < copyArray.length) {
+            if(originArray[originIndex] == copyArray[copyIndex])  {
                 equals++;
-                oIndex++;
-                cIndex++;
+                originIndex++;
+                copyIndex++;
             }
             else {
                 int tmp = 0;
-                for(tmp = cIndex + 1; tmp < copyArray.length; tmp++) {
-                    if(copyArray[tmp] == originArray[oIndex]) {
-                        cIndex = tmp;
+                for(tmp = copyIndex + 1; tmp < copyArray.length; tmp++) {
+                    if(copyArray[tmp] == originArray[originIndex]) {
+                        copyIndex = tmp;
                         break;
                     }
                 }
                 if(tmp == copyArray.length) {
-                    oIndex++;
+                    originIndex++;
                 }
             }
         }
-        System.out.printf("%d, %d%n", equals, originArray.length);
         return  (double) equals / originArray.length;
     }
 }
