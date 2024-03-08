@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/CalRatio/CalRatio.iml" filepath="$PROJECT_DIR$/CalRatio/CalRatio.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MyInputModule/MyInputModule.iml" filepath="$PROJECT_DIR$/MyInputModule/MyInputModule.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MyOutputModule/MyOutputModule.iml" filepath="$PROJECT_DIR$/MyOutputModule/MyOutputModule.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SGHomework1.iml" filepath="$PROJECT_DIR$/SGHomework1.iml" />
+    </modules>
+  </component>
+</project>
