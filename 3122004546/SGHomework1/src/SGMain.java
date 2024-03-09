@@ -6,6 +6,7 @@ import java.io.*;
 
 
 public class SGMain {
+
     public static void main(String[] args) {
         if(args.length != 3){
             System.out.println("Usage: SGMain originFile copyFile answerFile");

@@ -2,8 +2,9 @@ package pers.calculate;
 
 public class Calculate {
 
-    // 统计原文文章和抄袭文章的相同部分，返回 相同部分字数 和 原文总字数 的比值
+    // 统计原文文章和抄袭文章的相同部分，返回 相同部分字数 和 抄袭文章总字数 的比值
     public static double Ratio(String origin, String copy) {
+        int MAX_SEARCH = 10;
         int equals = 0;
         origin = origin.replaceAll("\\s*", "");
         copy = copy.replaceAll("\\s*", "");
@@ -21,17 +22,20 @@ public class Calculate {
             }
             else {
                 int tmp = 0;
-                for(tmp = copyIndex + 1; tmp < copyArray.length; tmp++) {
+                for(tmp = copyIndex + 1; tmp < copyIndex + MAX_SEARCH && tmp < copyArray.length; tmp++) {
                     if(copyArray[tmp] == originArray[originIndex]) {
                         copyIndex = tmp;
                         break;
                     }
                 }
-                if(tmp == copyArray.length) {
+                if(tmp < copyArray.length && copyArray[tmp] != originArray[originIndex]) {
                     originIndex++;
+                }
+                else {
+                    copyIndex = tmp;
                 }
             }
         }
-        return  (double) equals / originArray.length;
+        return  (double) equals / copyArray.length;
     }
 }

@@ -16,7 +16,7 @@ public class MyOutput {
         FileWriter fw = null;
         try {
             fw = new FileWriter(outputFile);
-            String temp = String.format("%.2f", x);
+            String temp = String.format("%f", x);
             fw.write(temp);
         }
         catch (Exception e) {
