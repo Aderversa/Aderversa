@@ -17,6 +17,11 @@ public class SGMain {
         File answer = new File(args[2]);
         MyInput input = new MyInput(origin, copy, answer);
         MyOutput output = new MyOutput(input.getAnswer());
-        output.myWrite(Calculate.Ratio(input.getOriginString(), input.getCopyString()));
+        try {
+            output.myWrite(Calculate.Ratio(input.getOriginString(), input.getCopyString()));
+        }
+        catch (Exception e) {
+            System.out.println(e.toString());
+        }
     }
 }

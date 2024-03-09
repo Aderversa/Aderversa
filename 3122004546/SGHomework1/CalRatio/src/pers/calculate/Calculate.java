@@ -3,7 +3,10 @@ package pers.calculate;
 public class Calculate {
 
     // 统计原文文章和抄袭文章的相同部分，返回 相同部分字数 和 抄袭文章总字数 的比值
-    public static double Ratio(String origin, String copy) {
+    public static double Ratio(String origin, String copy) throws Exception {
+        if(origin == null || copy == null) {
+            throw new Exception("原文文章或者抄袭文章是空文章，无法比较");
+        }
         int MAX_SEARCH = 10;
         int equals = 0;
         origin = origin.replaceAll("\\s*", "");
