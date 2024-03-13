@@ -7,6 +7,8 @@ public class MyInput {
     String originString;
     String copyString;
     File answer;
+
+    // 作为一个方法，处理来自用户的输入数据，将这些数据转化成其他模块可以直接利用的形式
     public MyInput(File origin, File copy, File answer)
     {
         FileInputStream fis = null;
@@ -50,5 +52,4 @@ public class MyInput {
     public File getAnswer() {
         return answer;
     }
-
 }

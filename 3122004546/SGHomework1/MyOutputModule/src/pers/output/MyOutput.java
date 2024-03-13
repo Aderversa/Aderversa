@@ -1,6 +1,5 @@
 package pers.output;
 
-import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -12,6 +11,9 @@ public class MyOutput {
         this.outputFile = output;
     }
 
+    /*
+     * 输出数据到输出文件中
+     */
     public void myWrite(double x) {
         FileWriter fw = null;
         try {
@@ -32,5 +34,4 @@ public class MyOutput {
             }
         }
     }
-
 }
